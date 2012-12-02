@@ -1,8 +1,20 @@
-.PHONY: all clean
+.PHONY: all clean dist
+.SUFFIXES: .c .o .h .asm
 
 all: scmp
 
-scmp: scmp.o
-	gcc -m32 -o $@ $^
+CFLAGS=-g -m32 -O0 -Wall
+LDFLAGS=$(CFLAGS)
 
-scmp.o: scmp.c
+
+%.o: %.asm
+	nasm -g -f elf -o $@ $<
+
+%.o: %.c
+	gcc $(CFLAGS) -c $<
+
+scmp: scmp.o cmpstr.o
+	gcc $(LDFLAGS) -o $@ $^
+
+clean:
+	rm -f *.o *~
