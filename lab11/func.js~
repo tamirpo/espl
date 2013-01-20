@@ -44,7 +44,7 @@ function showHint(str){
   }
   }
 
-  xmlhttp.open("GET","http://www.cs.bgu.ac.il/~tamirpo/suggest.php?q="+str,true);
+  xmlhttp.open("GET","http://www.cs.bgu.ac.il/~chenisr/suggest.php?q="+str,true);
   xmlhttp.send();
 }
 
