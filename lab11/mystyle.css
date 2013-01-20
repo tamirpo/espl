@@ -1,6 +1,25 @@
 
 body {
-  background-color: gray }
-  
-div.form {
- float:right}
+  background-color: gray;
+  color: blue}
+ 
+.suggestions {
+	padding-right: 30%;
+}
+
+.aboutMe{
+	padding-left: 20px;
+	color: black;
+}
+
+.amuze {
+	color: red;
+}
+
+.pic{
+	visibility: visible;
+}
+
+.pic:hover{
+	visibility: hidden;
+}

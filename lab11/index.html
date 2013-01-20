@@ -1,14 +1,29 @@
 <html>
   <head>
     <link rel="stylesheet" href="mystyle.css">
+    <script src="func.js"></script>
   </head>
   <body>
-    <div id="form">
+    <div id="form" class="form" align="right">
       <form>
-	Username: <input type="text" name="username">
-	Password: <input type="password" name="password">
-	<input type="submit" value="Submit">
+    <p class=suggestions>Suggestions: </p>
+    <div class=suggestions id=txtHint></div>
+	Username: <input type="text" id="username" name="username" onkeypress=valUsername() onkeyup="showHint(this.value)">
+	Password: <input type="password" id="password" name="password">
+	<input type="submit" value="Submit" onclick="validateForm()">
       </form>
     </div>
-  <body>
+    <div width=100%><hr></hr></div>
+    <div>
+    <h1><u>My Name</u></h1>
+    <p class=aboutMe>ADD TEXT ABOUT YOURSELF</p>
+    </div>
+    <div align=right>
+    <img src="images/people.jpg" height=200px></img>
+    </div>
+    <div align=center class=amuze width=100%>
+    <p>Pass your mouse over the <br>picture to get amuzed!</p>
+   	<img class=pic src="images/image.jpg" height=200px></img>
+    </div>
+  </body>
 </html> 
